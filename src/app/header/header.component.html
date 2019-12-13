@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <span class="navbar-text">
+        Bug Trajectory Arrangement
+        </span>
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/login" *ngIf="router.url==='/'||router.url==='/login'">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="#">About Us</a>
+    </li>
+    
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/assignproject" *ngIf="router.url==='/manager'||router.url==='/assignProject'">AssignProject</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/viewbug" *ngIf="router.url==='/manager'||router.url==='/viewbug'">ViewBugs</a>
+    </li>
+
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/viewProject" *ngIf="router.url==='/tester'||router.url==='/viewProject'">ViewProject</a>
+    </li>
+  </ul>
+</nav>

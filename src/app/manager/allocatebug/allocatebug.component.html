@@ -1,0 +1,44 @@
+<table class="table table-dark table-hover table-responsive" style="width:500px;height:100%;margin-left:500px;">
+        <tr>
+            <td>Project Name:</td>
+            <td>
+                <input type="hidden" [value]="bugDetails.Project.p_Id">{{bugDetails.Project.p_name}}
+            </td>
+        </tr>
+        <tr>
+            <td> Developer List:</td>
+            <td><select name="project" class="form-control" required [(ngModel)]="userid">
+        <option  *ngFor="let d of developerList" [value]="d.userid">{{d.username}}</option>
+     </select>
+            </td>
+        </tr>
+        <tr>
+            <td> Buy Severity: </td>
+            <td><input type="hidden" class="form-control" [value]="bugDetails.BugSeverity.severity_id" readonly="readonly">{{bugDetails.BugSeverity.severity_name}}
+            </td>
+        </tr>
+        <tr>
+            <td>Bug Type:</td>
+            <td><input type="hidden" class="form-control" [value]="bugDetails.BugType.bugtype_id" readonly="readonly"> {{bugDetails.BugType.bug_type}}</td>
+        </tr>
+        <tr>
+            <td>Assigned Date</td>
+            <td><input type="date" class="form-control" [(ngModel)]="createdDate" required>
+                <td>
+        </tr>
+        <tr>
+            <td>Planned End Date</td>
+            <td><input type="date" class="form-control" [(ngModel)]="endDate" required>
+                <td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><textarea cols="30" rows="10" class="form-control" [value]="bugDetails.description" readonly="readonly"></textarea>
+                <td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input type="submit" value="BugAllocation To Developer" (click)="onSubmit()"></td>
+        </tr>
+    </table>
+ 

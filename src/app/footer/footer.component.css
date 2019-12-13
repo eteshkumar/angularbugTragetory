@@ -1,0 +1,22 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#ff9966;
+    color: white;
+ }
+ .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .img{
+    
+      width: 50px;
+      height: 30px;
+  }
+  p{
+      padding-left: 750px;
+      float: left;
+
+  }

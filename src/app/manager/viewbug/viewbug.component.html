@@ -1,0 +1,25 @@
+<h1 align="center">Bugs Detail</h1>
+<div align="center">
+	<table border="1" align="center" class="table table-dark table-hover table-responsive" style="width:1000px;height:500%;">
+		<tr>
+			<th>BugAllocated Id</th>	
+			<th>Project Name</th>
+			<th>Bug Name</th>
+			<th>Bug Status</th>
+			<th>Bug Severity</th>
+			<th>Bug Description</th>
+			<th>Bug Assignment</th>
+		</tr>	
+		<tr *ngFor="let b of bugDetailList">
+			<td>{{b.bugAllocateId}}</td>
+			<td>{{b.projectObj.p_name}}</td>
+			<td>{{b.bugTypeObj.bug_type}}</td>
+			<td>{{b.bugStatusObj.status_name}}</td>
+			<td>{{b.severityObj.severity_name}}</td>
+			<td>{{b.description}}</td>
+		<td><a routerLink="/allocatebug" id="btn" class="btn btn-success btn-block" (click)="onClick(b)">Assign Bug</a>
+        
+			</td>
+		</tr>		
+		</table>
+		</div>

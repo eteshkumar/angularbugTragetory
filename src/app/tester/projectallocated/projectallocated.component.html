@@ -1,0 +1,16 @@
+
+<form [formGroup]="projectAllocatedForm" (ngSubmit)="onSubmitform(a)" novalidate>
+    <table class="table table-dark table-hover table-responsive" style="width:500px;height:100%;margin-left:500px;">
+                <tr>
+                    <td>Select Project:-</td>
+                    <td><select  name="project" class="form-control" formControlName="project">
+                                <option value="none">-----------Select Project-------------</option>
+                                <option *ngFor="let a of project " [ngValue]="a.p_Id" >{{a.p_name}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <td></td>
+                <td><button type="submit" value="ReportBug" class="btn btn-primary">ReportBug</button></td>
+                </table>
+                
+                </form>
